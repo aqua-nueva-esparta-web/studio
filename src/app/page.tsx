@@ -53,7 +53,7 @@ export default function Home() {
       icon: <GalleryVertical className="size-8 text-primary" />,
       title: 'Gallery',
       description: 'View project plans, diagrams, and 3D renderings.',
-      href: '/gallery',
+      href: 'gallery',
     },
   ];
 
