@@ -57,9 +57,16 @@ export default function Home() {
     },
   ];
 
+  const stats = [
+    { value: "100,000 m³/día", label: "Producción de Agua" },
+    { value: "USD 1,020M", label: "Inversión" },
+    { value: "100% Renovable", label: "Energía" },
+    { value: "500,000", label: "Beneficiarios" },
+  ]
+
   return (
     <div className="flex flex-col">
-      <section className="relative h-[60vh] w-full">
+      <section className="relative h-[70vh] w-full">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -70,16 +77,24 @@ export default function Home() {
             data-ai-hint={heroImage.imageHint}
           />
         )}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
             Agua Nueva Esparta
           </h1>
           <p className="mt-4 max-w-2xl text-lg md:text-xl text-primary-foreground/80">
-            A sustainable water solution for a thriving future.
+            Transformando Nueva Esparta en referente de sostenibilidad hídrica.
           </p>
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center w-full max-w-4xl">
+            {stats.map(stat => (
+              <div key={stat.label} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                <p className="text-2xl md:text-3xl font-bold">{stat.value}</p>
+                <p className="text-sm md:text-base text-primary-foreground/80">{stat.label}</p>
+              </div>
+            ))}
+          </div>
           <Button asChild size="lg" className="mt-8">
-            <Link href="/overview">Discover the Project</Link>
+            <Link href="/overview">Descubre el Proyecto</Link>
           </Button>
         </div>
       </section>
@@ -88,15 +103,15 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Explore the Future of Water
+              Explora el Futuro del Agua
             </h2>
             <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
-              Delve into the details of the Agua Nueva Esparta project and discover how we're building a resilient water infrastructure.
+              Profundice en los detalles del proyecto Agua Nueva Esparta y descubra cómo estamos construyendo una infraestructura hídrica resiliente.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature) => (
-              <Card key={feature.title} className="flex flex-col">
+              <Card key={feature.title} className="flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <CardHeader className="flex flex-row items-center gap-4">
                   {feature.icon}
                   <CardTitle>{feature.title}</CardTitle>
@@ -106,7 +121,7 @@ export default function Home() {
                 </CardContent>
                 <div className="p-6 pt-0">
                   <Button asChild variant="outline">
-                    <Link href={feature.href}>Learn More</Link>
+                    <Link href={feature.href}>Aprende más</Link>
                   </Button>
                 </div>
               </Card>
@@ -118,12 +133,12 @@ export default function Home() {
       <section className="bg-secondary py-12 md:py-24">
         <div className="container mx-auto px-4 text-center">
             <Lightbulb className="mx-auto size-12 text-primary mb-4" />
-            <h2 className="text-3xl md:text-4xl font-bold">Have Questions?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">¿Tienes preguntas?</h2>
             <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
-              Our team is ready to provide you with the information you need. Get in touch with us today.
+              Nuestro equipo está listo para brindarle la información que necesita. Póngase en contacto con nosotros hoy.
             </p>
             <Button asChild size="lg" className="mt-8">
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact">Contáctanos</Link>
             </Button>
         </div>
       </section>

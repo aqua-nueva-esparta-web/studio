@@ -1,54 +1,50 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { AlertTriangle, Droplets, Goal, Users } from 'lucide-react';
+import { AlertTriangle, Droplets, Goal, Users, Wind, Sun } from 'lucide-react';
 import Image from 'next/image';
 
 export default function OverviewPage() {
   const overviewImage = PlaceHolderImages.find((img) => img.id === 'overview-1');
 
-  const goals = [
-    'Ensure a reliable and continuous supply of drinking water for the population.',
-    'Promote sustainable economic development by guaranteeing water for industrial and tourist activities.',
-    'Reduce dependence on traditional, often unreliable water sources.',
-    'Implement a resilient infrastructure capable of withstanding climate variations.',
+  const currentLimitations = [
+    'Tubería Submarina: Deterioro avanzado, rupturas frecuentes, alta vulnerabilidad, dependencia externa.',
+    'Pozos Locales: Sobreexplotación, salinización progresiva, calidad variable, insostenible.',
+    'Camiones Cisterna: Costo alto, calidad no garantizada, servicio irregular, impacto ambiental, riesgos de contaminación.',
   ];
 
-  const supplySources = [
-    {
-      title: 'Seawater Desalination Plants',
-      description: 'The core of our project, utilizing reverse osmosis technology to produce high-quality fresh water from the sea.',
-      icon: <Droplets className="h-6 w-6 text-primary" />,
-    },
-    {
-      title: 'Atmospheric Water Generators (AWGs)',
-      description: 'Innovative units that extract moisture from the air, providing a decentralized and resilient water source.',
-      icon: <Users className="h-6 w-6 text-primary" />,
-    },
+  const projectJustification = [
+    'Independencia estratégica.',
+    'Desarrollo turístico.',
+    'Catálisis económica y calidad de vida.',
+    'Sostenibilidad ambiental y liderazgo regional.',
+    'Análisis costo-beneficio e impacto social positivo.',
   ];
-
-  const challenges = [
-    'High initial investment for infrastructure.',
-    'Energy consumption for desalination processes.',
-    'Logistical complexity of project implementation.',
-    'Need for specialized technical personnel for operation and maintenance.',
+  
+  const climateChangeFactors = [
+    'Reducción de precipitaciones (18% en 15 años).',
+    'Aumento de sequías y del nivel del mar, salinización de acuíferos, temperatura +1.2°C.',
+    'Necesidad de adaptación urgente: solución resiliente con energía 100% renovable y modelo escalable.',
   ];
 
   return (
     <div className="container mx-auto px-4 py-8 md:py-16">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">
-          Project Overview
+          Introducción y Visión del Proyecto
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          Agua Nueva Esparta is a forward-thinking initiative designed to solve the critical water scarcity issues in the region through innovative and sustainable technologies.
+          Transformar Nueva Esparta en referente regional de autosuficiencia hídrica 100% sostenible.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold">Our Mission</h2>
+          <h2 className="text-3xl font-bold">Visión 2030: Agua Segura</h2>
+          <blockquote className="border-l-4 pl-4 italic text-muted-foreground">
+            “Convertir Nueva Esparta en la primera región insular de América Latina autosuficiente y modelo internacional en desalinización con energía renovable.”
+          </blockquote>
           <p className="text-muted-foreground">
-            Our mission is to provide a definitive and sustainable solution to the historical problem of water shortages in Nueva Esparta. By integrating advanced technologies like seawater desalination and atmospheric water generation, powered by renewable energy, we aim to create a resilient and self-sufficient water supply system that fosters social well-being and economic growth for generations to come.
+            Garantizar suministro continuo, independencia hídrica, innovación, empleo y liderazgo.
           </p>
         </div>
         {overviewImage && (
@@ -65,36 +61,18 @@ export default function OverviewPage() {
       </div>
 
       <div className="mt-16 md:mt-24 space-y-16">
-        <Card className="shadow-lg">
-          <CardHeader>
-            <div className="flex items-center gap-4">
-              <Goal className="h-8 w-8 text-primary" />
-              <CardTitle className="text-3xl">Project Goals</CardTitle>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-3 list-disc pl-6 text-muted-foreground">
-              {goals.map((goal, index) => (
-                <li key={index}>{goal}</li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
 
         <Card className="shadow-lg">
           <CardHeader>
-            <CardTitle className="text-3xl">Our Supply Sources</CardTitle>
+            <CardTitle className="text-3xl">Contexto y Problemática Hídrica</CardTitle>
+            <CardDescription>Crisis hídrica estructural que afecta a 500,000 habitantes y economía turística.</CardDescription>
           </CardHeader>
-          <CardContent className="grid md:grid-cols-2 gap-6">
-            {supplySources.map((source) => (
-              <div key={source.title} className="flex gap-4">
-                <div>{source.icon}</div>
-                <div>
-                  <h3 className="font-semibold">{source.title}</h3>
-                  <p className="text-sm text-muted-foreground">{source.description}</p>
-                </div>
-              </div>
-            ))}
+          <CardContent>
+              <ul className="space-y-3 list-disc pl-6 text-muted-foreground">
+                  <li>Suministro actual: 40,000 m³/día (40% de demanda).</li>
+                  <li>Racionamiento: 85% de la población recibe agua 2-3 días/semana.</li>
+                  <li>Pérdidas económicas y sociales, enfermedades y sobreexplotación de acuíferos.</li>
+              </ul>
           </CardContent>
         </Card>
 
@@ -102,20 +80,60 @@ export default function OverviewPage() {
           <CardHeader>
             <div className="flex items-center gap-4">
               <AlertTriangle className="h-8 w-8 text-destructive" />
-              <CardTitle className="text-3xl">Challenges Addressed</CardTitle>
+              <CardTitle className="text-3xl">Fuentes de Suministro Actual y sus Limitaciones</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-muted-foreground">
-              The project is designed to overcome significant hurdles. Our strategies include securing long-term financing, integrating a dedicated renewable energy system to minimize operational costs and environmental impact, and establishing comprehensive training programs.
-            </p>
+            <p className='mb-4 text-muted-foreground'>El sistema de abastecimiento actual solo proporciona 40,000 m³/día, cubriendo solo el 40% de la demanda real. Las vulnerabilidades incluyen pérdidas en red (35%), interrupciones frecuentes, alto costo operativo, dependencia externa, y un impacto negativo en turismo y salud.</p>
             <ul className="space-y-3 list-disc pl-6 text-muted-foreground">
-              {challenges.map((challenge, index) => (
-                <li key={index}>{challenge}</li>
+              {currentLimitations.map((item, index) => (
+                <li key={index}>{item}</li>
               ))}
             </ul>
           </CardContent>
         </Card>
+
+        <Card className="shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-3xl">Factores de Cambio Climático</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-3 list-disc pl-6 text-muted-foreground">
+              {climateChangeFactors.map((factor, index) => (
+                <li key={index}>{factor}</li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+        
+        <Card className="shadow-lg">
+          <CardHeader>
+            <div className="flex items-center gap-4">
+              <Goal className="h-8 w-8 text-primary" />
+              <CardTitle className="text-3xl">Justificación Integral del Proyecto</CardTitle>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-3 list-disc pl-6 text-muted-foreground">
+              {projectJustification.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-3xl">Conclusiones y Recomendaciones</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-3 list-disc pl-6 text-muted-foreground">
+                <li>Viabilidad técnica, financiera, ambiental y social confirmada.</li>
+                <li>Proyecto estratégico de alto valor para Venezuela y la región.</li>
+            </ul>
+          </CardContent>
+        </Card>
+
       </div>
     </div>
   );
