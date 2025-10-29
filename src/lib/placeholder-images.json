@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-1",
-      "description": "A stunning aerial view of a coastline with clear blue water, representing the project's focus on water resources.",
-      "imageUrl": "https://images.unsplash.com/photo-1760844892063-5934cdd82001?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2FzdGxpbmUlMjB3YXRlcnxlbnwwfHx8fDE3NjE3NTg4NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "coastline water"
+      "description": "A stunning aerial view of a desalination plant on a coastline with clear blue water, representing the project's focus on water resources.",
+      "imageUrl": "https://storage.googleapis.com/project-spark-3cff9-images/3ea149f1-a180-496a-8533-3d719a744215.png",
+      "imageHint": "desalination plant"
     },
     {
       "id": "overview-1",
