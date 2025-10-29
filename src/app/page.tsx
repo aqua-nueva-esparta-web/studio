@@ -21,39 +21,39 @@ export default function Home() {
   const features = [
     {
       icon: <Goal className="size-8 text-primary" />,
-      title: 'Project Overview',
-      description: 'Learn about our mission, goals, and the challenges we address.',
+      title: 'Resumen del Proyecto',
+      description: 'Conozca nuestra misión, objetivos y los desafíos que abordamos.',
       href: '/overview',
     },
     {
       icon: <Droplets className="size-8 text-primary" />,
-      title: 'Technical Model',
-      description: 'Explore the innovative technology behind our water solutions.',
+      title: 'Modelo Técnico',
+      description: 'Explore la tecnología innovadora detrás de nuestras soluciones de agua.',
       href: '/technical-model',
     },
     {
       icon: <BarChart className="size-8 text-primary" />,
-      title: 'Impact Dashboard',
-      description: 'Visualize the positive social and environmental impact of our project.',
+      title: 'Panel de Impacto',
+      description: 'Visualice el impacto social y ambiental positivo de nuestro proyecto.',
       href: '/impact',
     },
     {
       icon: <LineChart className="size-8 text-primary" />,
-      title: 'Investment Viability',
-      description: 'Analyze the financial projections and investment opportunities.',
+      title: 'Viabilidad de Inversión',
+      description: 'Analice las proyecciones financieras y las oportunidades de inversión.',
       href: '/investment',
     },
     {
       icon: <Calendar className="size-8 text-primary" />,
-      title: 'Progress Timeline',
-      description: 'Follow our journey and track key project milestones.',
+      title: 'Cronograma de Progreso',
+      description: 'Siga nuestro viaje y rastree los hitos clave del proyecto.',
       href: '/timeline',
     },
     {
       icon: <GalleryVertical className="size-8 text-primary" />,
-      title: 'Gallery',
-      description: 'View project plans, diagrams, and 3D renderings.',
-      href: 'gallery',
+      title: 'Galería',
+      description: 'Vea los planos del proyecto, diagramas y representaciones en 3D.',
+      href: '/gallery',
     },
   ];
 

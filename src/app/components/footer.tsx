@@ -3,10 +3,10 @@ import { LogoIcon } from './icons';
 
 export default function Footer() {
   const navLinks = [
-    { href: '/overview', label: 'Overview' },
-    { href: '/investment', label: 'Investment' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/gallery', label: 'Gallery' },
+    { href: '/overview', label: 'Resumen' },
+    { href: '/investment', label: 'Inversión' },
+    { href: '/contact', label: 'Contacto' },
+    { href: '/gallery', label: 'Galería' },
   ];
 
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
             <span className="font-bold">Agua Nueva Esparta</span>
           </div>
           <p className="text-center text-sm text-muted-foreground md:text-left">
-            Building a sustainable water future.
+            Construyendo un futuro hídrico sostenible.
           </p>
           <nav className="flex flex-wrap justify-center gap-4 text-sm font-medium md:justify-end">
             {navLinks.map(({ href, label }) => (
@@ -33,7 +33,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Agua Nueva Esparta. All Rights Reserved.
+          © {new Date().getFullYear()} Agua Nueva Esparta. Todos los derechos reservados.
         </div>
       </div>
     </footer>

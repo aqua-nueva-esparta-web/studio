@@ -14,13 +14,13 @@ import { cn } from '@/lib/utils';
 import { LogoIcon } from './icons';
 
 const navLinks = [
-  { href: '/overview', label: 'Project Overview' },
-  { href: '/technical-model', label: 'Technical Model' },
-  { href: '/impact', label: 'Impact' },
-  { href: '/investment', label: 'Investment' },
-  { href: '/timeline', label: 'Timeline' },
-  { href: 'gallery', label: 'Gallery' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/overview', label: 'Resumen del Proyecto' },
+  { href: '/technical-model', label: 'Modelo Técnico' },
+  { href: '/impact', label: 'Impacto' },
+  { href: '/investment', label: 'Inversión' },
+  { href: '/timeline', label: 'Cronograma' },
+  { href: '/gallery', label: 'Galería' },
+  { href: '/contact', label: 'Contacto' },
 ];
 
 export default function Header() {
