@@ -3,7 +3,7 @@
     {
       "id": "hero-1",
       "description": "A stunning aerial view of a desalination plant on a coastline with clear blue water, representing the project's focus on water resources.",
-      "imageUrl": "https://storage.googleapis.com/project-spark-3cff9-images/3ea149f1-a180-496a-8533-3d719a744215.png",
+      "imageUrl": "https://images.unsplash.com/photo-1552564366-3deb56359733?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZXNhbGluYXRpb24lMjBwbGFudHxlbnwwfHx8fDE3NjE3NjM1MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "desalination plant"
     },
     {
@@ -29,18 +29,6 @@
       "description": "Render 3D de las instalaciones del parque solar que alimentará el proyecto.",
       "imageUrl": "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2xhciUyMHBhcmt8ZW58MHx8fHwxNzYxNzYzNTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "solar park"
-    },
-    {
-      "id": "gallery-4",
-      "description": "Vista 3D del sistema de membranas de desalinización.",
-      "imageUrl": "https://images.unsplash.com/photo-1707079917563-8ca6f2db683e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZW1icmFuZSUyMHN5c3RlbXxlbnwwfHx8fDE3NjE3NjY4NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "membrane system"
-    },
-    {
-      "id": "gallery-5",
-      "description": "Portada del dossier del proyecto en 3D.",
-      "imageUrl": "https://images.unsplash.com/photo-1585205024954-738d582e1e0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvamVjdCUyMGRvc3NpZXJ8ZW58MHx8fHwxNzYxNzY0MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "project dossier"
     }
   ]
 }
