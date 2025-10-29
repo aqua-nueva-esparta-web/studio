@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A stunning aerial view of a coastline with clear blue water, representing the project's focus on water resources.",
+      "imageUrl": "https://images.unsplash.com/photo-1760844892063-5934cdd82001?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2FzdGxpbmUlMjB3YXRlcnxlbnwwfHx8fDE3NjE3NTg4NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coastline water"
+    },
+    {
+      "id": "overview-1",
+      "description": "Team of engineers collaborating over a blueprint of the project.",
+      "imageUrl": "https://images.unsplash.com/photo-1721244654392-9c912a6eb236?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZW5naW5lZXJzJTIwYmx1ZXByaW50fGVufDB8fHx8MTc2MTc1ODg2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "engineers blueprint"
+    },
+    {
+      "id": "tech-desalination",
+      "description": "Diagram of a modern desalination plant, showing the reverse osmosis process.",
+      "imageUrl": "https://images.unsplash.com/photo-1564605504543-1833fef7c1c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkZXNhbGluYXRpb24lMjBkaWFncmFtfGVufDB8fHx8MTc2MTc1ODg2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "desalination diagram"
+    },
+    {
+      "id": "tech-awg",
+      "description": "3D rendering of an Atmospheric Water Generator (AWG) unit in a natural setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1757691079287-eb6a8d167287?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxBV0clMjB1bml0fGVufDB8fHx8MTc2MTc1ODg2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AWG unit"
+    },
+    {
+      "id": "tech-renewable",
+      "description": "An array of solar panels and wind turbines, representing the renewable energy system.",
+      "imageUrl": "https://images.unsplash.com/photo-1509391366360-2e959784a276?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2xhciUyMHBhbmVsc3xlbnwwfHx8fDE3NjE2Nzk3MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solar panels"
+    },
+    {
+      "id": "gallery-plan-1",
+      "description": "Architectural site plan for the Agua Nueva Esparta project.",
+      "imageUrl": "https://images.unsplash.com/photo-1542621334-a254cf47733d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwcGxhbnxlbnwwfHx8fDE3NjE3NTg4NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "architectural plan"
+    },
+    {
+      "id": "gallery-elevation-1",
+      "description": "Front elevation view of the main processing facility.",
+      "imageUrl": "https://images.unsplash.com/photo-1646565503537-45cf36610591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidWlsZGluZyUyMGVsZXZhdGlvbnxlbnwwfHx8fDE3NjE3NTg4NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "building elevation"
+    },
+    {
+      "id": "gallery-diagram-1",
+      "description": "Detailed water flow diagram for the entire system.",
+      "imageUrl": "https://images.unsplash.com/photo-1647032713701-a80d2b69e502?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmbG93JTIwZGlhZ3JhbXxlbnwwfHx8fDE3NjE2NjU2NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "flow diagram"
+    },
+    {
+      "id": "gallery-rendering-1",
+      "description": "Photorealistic 3D rendering of the completed project facility.",
+      "imageUrl": "https://images.unsplash.com/photo-1626544827763-d516dce335e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHwzRCUyMHJlbmRlcmluZ3xlbnwwfHx8fDE3NjE3NTg4NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "3D rendering"
+    },
+    {
+      "id": "gallery-rendering-2",
+      "description": "Interior rendering of the control room.",
+      "imageUrl": "https://images.unsplash.com/photo-1655165312008-5feda4a1e989?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb250cm9sJTIwcm9vbXxlbnwwfHx8fDE3NjE3NTg4NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "control room"
+    },
+    {
+      "id": "gallery-construction-1",
+      "description": "Photo of the construction site progress.",
+      "imageUrl": "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc2MTY5NjQ4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction site"
+    }
+  ]
 }
