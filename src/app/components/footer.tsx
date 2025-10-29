@@ -33,7 +33,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Agua Nueva Esparta. Todos los derechos reservados.
+          © 2024 Agua Nueva Esparta. Todos los derechos reservados.
         </div>
       </div>
     </footer>
