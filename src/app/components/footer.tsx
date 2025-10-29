@@ -2,13 +2,6 @@ import Link from 'next/link';
 import { LogoIcon } from './icons';
 
 export default function Footer() {
-  const navLinks = [
-    { href: '/overview', label: 'Resumen' },
-    { href: '/investment', label: 'Inversión' },
-    { href: '/contact', label: 'Contacto' },
-    { href: '/gallery', label: 'Galería' },
-  ];
-
   return (
     <footer className="bg-secondary">
       <div className="container mx-auto px-4 py-8">
@@ -21,15 +14,30 @@ export default function Footer() {
             Construyendo un futuro hídrico sostenible.
           </p>
           <nav className="flex flex-wrap justify-center gap-4 text-sm font-medium md:justify-end">
-            {navLinks.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
+            <Link
+                href="/overview"
                 className="text-muted-foreground transition-colors hover:text-foreground"
               >
-                {label}
+                Resumen
               </Link>
-            ))}
+            <Link
+                href="/investment"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Inversión
+              </Link>
+             <Link
+                href="/contact"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Contacto
+              </Link>
+             <Link
+                href="/gallery"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Galería
+              </Link>
           </nav>
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
