@@ -3,32 +3,44 @@
     {
       "id": "hero-1",
       "description": "A stunning aerial view of a desalination plant on a coastline with clear blue water, representing the project's focus on water resources.",
-      "imageUrl": "https://images.unsplash.com/photo-1738463635162-e8aa1cace69b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkZXNhbGluYXRpb24lMjBwbGFudCUyMGNvYXN0bGluZXxlbnwwfHx8fDE3NjE3NjE3NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "desalination plant coastline"
+      "imageUrl": "https://storage.googleapis.com/project-spark-3cff9-images/3ea149f1-a180-496a-8533-3d719a744215.png",
+      "imageHint": "desalination plant"
     },
     {
       "id": "overview-1",
       "description": "Vista panorámica de la costa de Nueva Esparta, destacando el potencial para el desarrollo hídrico sostenible.",
-      "imageUrl": "https://images.unsplash.com/photo-1713476612692-6948a77cceb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2FzdGFsJTIwdmlld3xlbnwwfHx8fDE3NjE3NjM1MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1702133273521-1a7e66a618e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2FzdGFsJTIwdmlld3xlbnwwfHx8fDE3NjE3NjM1MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "coastal view"
     },
     {
       "id": "gallery-1",
       "description": "Plano maestro del complejo industrial del proyecto Agua Nueva Esparta.",
-      "imageUrl": "https://images.unsplash.com/photo-1521661488642-d86e85a90de2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXN0ZXIlMjBwbGFufGVufDB8fHx8MTc2MTc2MzUyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1614522407266-ad3c5fa6bc24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYXN0ZXIlMjBwbGFufGVufDB8fHx8MTc2MTc2MzUyMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "master plan"
     },
     {
       "id": "gallery-2",
       "description": "Diagrama del sistema de ósmosis inversa para la desalinización.",
-      "imageUrl": "https://images.unsplash.com/photo-1570615541379-e6b7ab6d4eb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyZXZlcnNlJTIwb3Ntb3Npc3xlbnwwfHx8fDE3NjE3NjM1MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1587291085754-df33cc8b6edd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyZXZlcnNlJTIwb3Ntb3Npc3xlbnwwfHx8fDE3NjE3NjM1MjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "reverse osmosis"
     },
     {
       "id": "gallery-3",
       "description": "Render 3D de las instalaciones del parque solar que alimentará el proyecto.",
-      "imageUrl": "https://images.unsplash.com/photo-1723133371535-1412bc2e412e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzb2xhciUyMHBhcmt8ZW58MHx8fHwxNzYxNzYzNTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2xhciUyMHBhcmt8ZW58MHx8fHwxNzYxNzYzNTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "solar park"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Vista 3D de las membranas de desalinización.",
+      "imageUrl": "https://images.unsplash.com/photo-1513420558496-c3e2534de0ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkZXNhbGluYXRpb24lMjBtZW1icmFuZXN8ZW58MHx8fHwxNzYxNzY0MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "desalination membranes"
+    },
+    {
+      "id": "gallery-5",
+      "description": "Portada del dossier del proyecto en 3D.",
+      "imageUrl": "https://images.unsplash.com/photo-1692699203597-b5a4464f3f9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9qZWN0JTIwZG9zc2llcnxlbnwwfHx8fDE3NjE3NjQyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "project dossier"
     }
   ]
 }
