@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A stunning aerial view of a desalination plant on a coastline with clear blue water, representing the project's focus on water resources.",
+      "imageUrl": "https://images.unsplash.com/photo-1708885818576-11f5365560be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGVzYWxpbmF0aW9uJTIwcGxhbnR8ZW58MHx8fHwxNzYxNzYxNjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "desalination plant"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Architectural rendering of the main processing facility.",
+      "imageUrl": "https://images.unsplash.com/photo-1668015642134-272d73b8f306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwcmVuZGVyaW5nfGVufDB8fHx8MTc2MTY0OTU1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "architectural rendering"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Diagram of the reverse osmosis filtration system.",
+      "imageUrl": "https://images.unsplash.com/photo-1675627452903-082d0a77bc6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWNobmljYWwlMjBkaWFncmFtfGVufDB8fHx8MTc2MTc2NzIxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "technical diagram"
+    },
+    {
+      "id": "gallery-3",
+      "description": "3D model of the solar panel and wind turbine farm.",
+      "imageUrl": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyZW5ld2FibGUlMjBlbmVyZ3l8ZW58MHx8fHwxNzYxNjU1NjA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "renewable energy"
+    }
+  ]
 }
