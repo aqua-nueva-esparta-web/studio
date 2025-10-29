@@ -1,5 +1,4 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { InvestmentAIForm } from '@/components/investment-ai-form';
 import { TrendingUp, DollarSign, BarChart2 } from 'lucide-react';
 
 export default function InvestmentPage() {
@@ -50,17 +49,6 @@ export default function InvestmentPage() {
         ))}
       </div>
 
-      <Card className="shadow-lg">
-        <CardHeader>
-          <CardTitle className="text-3xl">Investment Viability Analysis</CardTitle>
-          <CardDescription>
-            Have a question about the project's financials? Our AI-powered tool can provide insights based on our comprehensive financial model. Enter your question below.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <InvestmentAIForm />
-        </CardContent>
-      </Card>
     </div>
   );
 }
