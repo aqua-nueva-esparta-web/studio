@@ -65,12 +65,8 @@ export default function TimelinePage() {
             </CardHeader>
             <CardContent>
                 <p className="text-muted-foreground mb-4">Inversión: USD 408M</p>
-                <ul className="list-disc pl-5 text-muted-foreground space-y-1">
-                    <li>Expansión de la red de generadores AWG.</li>
-                    <li>Instalación de energía complementaria.</li>
-                    <li>Desarrollo de autonomía en producción de componentes.</li>
-                    <li>Producción de sal de alta calidad para fines comerciales.</li>
-                </ul>
+                <p className="text-muted-foreground">Expansión de la red de generadores AWG, instalación de energía complementaria, desarrollo de autonomía en producción de componentes y producción de sal de alta calidad para fines comerciales.</p>
+
             </CardContent>
         </Card>
         <Card>
@@ -109,4 +105,3 @@ export default function TimelinePage() {
     </div>
   );
 }
-
