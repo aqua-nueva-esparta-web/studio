@@ -41,6 +41,12 @@
       "description": "Vista 3D del complejo.",
       "imageUrl": "https://i.imgur.com/QbBEenC.png",
       "imageHint": "3D rendering"
+    },
+    {
+      "id": "gallery-7",
+      "description": "Vista 3D de equipamiento.",
+      "imageUrl": "https://i.imgur.com/2z5NOyG.png",
+      "imageHint": "equipment rendering"
     }
   ]
 }
