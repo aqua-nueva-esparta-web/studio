@@ -29,6 +29,12 @@
       "description": "Portada del dossier del proyecto.",
       "imageUrl": "https://i.imgur.com/T6Kxv0E.png",
       "imageHint": "project dossier"
+    },
+    {
+      "id": "gallery-5",
+      "description": "Plano del sistema de membranas.",
+      "imageUrl": "https://i.imgur.com/1Vt1UjG.png",
+      "imageHint": "membrane system blueprint"
     }
   ]
 }
