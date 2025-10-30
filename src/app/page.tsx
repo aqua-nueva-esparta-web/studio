@@ -51,7 +51,7 @@ const featureCards = [
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative h-[70vh] w-full">
+      <section className="relative h-[80vh] md:h-[70vh] w-full">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -63,7 +63,7 @@ export default function Home() {
           />
         )}
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4 pt-20">
+        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4 pt-16 md:pt-20">
 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
             Agua Nueva Esparta
@@ -72,22 +72,22 @@ export default function Home() {
             Transformando Nueva Esparta en referente de sostenibilidad hídrica.
           </p>
 
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center w-full max-w-4xl">
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center w-full max-w-sm md:max-w-4xl">
             <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-              <p className="text-2xl md:text-3xl font-bold">100,000 m³/día</p>
-              <p className="text-sm md:text-base text-primary-foreground/80">Producción de Agua</p>
+              <p className="text-xl md:text-3xl font-bold">100,000 m³/día</p>
+              <p className="text-xs md:text-base text-primary-foreground/80">Producción de Agua</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-              <p className="text-2xl md:text-3xl font-bold">USD 1,020M</p>
-              <p className="text-sm md:text-base text-primary-foreground/80">Inversión</p>
+              <p className="text-xl md:text-3xl font-bold">USD 1,020M</p>
+              <p className="text-xs md:text-base text-primary-foreground/80">Inversión</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-              <p className="text-2xl md:text-3xl font-bold">100% Renovable</p>
-              <p className="text-sm md:text-base text-primary-foreground/80">Energía</p>
+              <p className="text-xl md:text-3xl font-bold">100% Renovable</p>
+              <p className="text-xs md:text-base text-primary-foreground/80">Energía</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
-              <p className="text-2xl md:text-3xl font-bold">500,000</p>
-              <p className="text-sm md:text-base text-primary-foreground/80">Beneficiarios</p>
+              <p className="text-xl md:text-3xl font-bold">500,000</p>
+              <p className="text-xs md:text-base text-primary-foreground/80">Beneficiarios</p>
             </div>
           </div>
 
@@ -110,18 +110,18 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {featureCards.map((card) => (
               <Card key={card.title} className="flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <CardHeader className="flex flex-row items-center gap-4">
                   {card.icon}
-                  <CardTitle>{card.title}</CardTitle>
+                  <CardTitle className="text-xl">{card.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <p className="text-muted-foreground">{card.description}</p>
                 </CardContent>
                 <CardFooter>
-                  <Button asChild variant="outline">
+                  <Button asChild variant="outline" className="w-full sm:w-auto">
                     <Link href={card.href}>
                       Aprende más
                     </Link>
