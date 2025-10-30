@@ -23,6 +23,12 @@
       "description": "Extracción de sal en salinas.",
       "imageUrl": "https://images.unsplash.com/photo-1568202321497-53a8b2779836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzYWx0JTIwZmxhdHN8ZW58MHx8fHwxNzIxNDA3NzEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "salt flats"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Portada del dossier del proyecto.",
+      "imageUrl": "https://i.imgur.com/T6Kxv0E.png",
+      "imageHint": "project dossier"
     }
   ]
 }
