@@ -3,7 +3,7 @@
     {
       "id": "hero-1",
       "description": "A stunning aerial view of a desalination plant on a coastline with clear blue water, representing the project's focus on water resources.",
-      "imageUrl": "https://images.unsplash.com/photo-1708885818576-11f5365560be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGVzYWxpbmF0aW9uJTIwcGxhbnR8ZW58MHx8fHwxNzYxNzYxNjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/T6Kxv0E.png",
       "imageHint": "desalination plant"
     },
     {
@@ -15,13 +15,13 @@
     {
       "id": "gallery-2",
       "description": "Vista aérea de un huerto fotovoltaico.",
-      "imageUrl": "https://images.unsplash.com/photo-1586366461834-d2d65d725a2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2xhciUyMGZhcm18ZW58MHx8fHwxNzYxNzcwNzc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.imgur.com/WpyJhKM.png",
       "imageHint": "solar farm"
     },
     {
       "id": "gallery-3",
       "description": "Extracción de sal en salinas.",
-      "imageUrl": "https://images.unsplash.com/photo-1529801877115-8a69a227fcc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzYWx0JTIwZmxhdHN8ZW58MHx8fHwxNzYxODIwMjQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1511236474532-77e19e1b7eee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzYWx0JTIwZmxhdHN8ZW58MHx8fHwxNzYxODIwMjQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "salt flats"
     },
     {
