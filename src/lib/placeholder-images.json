@@ -35,6 +35,12 @@
       "description": "Plano del sistema de membranas.",
       "imageUrl": "https://i.imgur.com/1Vt1UjG.png",
       "imageHint": "membrane system blueprint"
+    },
+    {
+      "id": "gallery-6",
+      "description": "Vista 3D del complejo.",
+      "imageUrl": "https://i.imgur.com/QbBEenC.png",
+      "imageHint": "3D rendering"
     }
   ]
 }
