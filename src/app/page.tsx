@@ -63,7 +63,7 @@ export default function Home() {
           />
         )}
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4">
+        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4 pt-20">
 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
             Agua Nueva Esparta
