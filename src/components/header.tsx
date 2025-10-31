@@ -7,6 +7,7 @@ import { Menu } from 'lucide-react';
 import { LogoIcon } from './icons';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { useState } from 'react';
 
 const navLinks = [
   { href: '/overview', label: 'Resumen del Proyecto' },
@@ -19,6 +20,8 @@ const navLinks = [
 
 export default function Header() {
   const pathname = usePathname();
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
@@ -44,7 +47,7 @@ export default function Header() {
             ))}
           </nav>
         </div>
-        <Sheet>
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
             <Button
               variant="ghost"
@@ -56,7 +59,7 @@ export default function Header() {
           </SheetTrigger>
           <SheetContent side="left">
             <div className="flex flex-col gap-4">
-              <Link href="/" className="flex items-center space-x-2">
+              <Link href="/" className="flex items-center space-x-2" onClick={() => setIsSheetOpen(false)}>
                 <LogoIcon className="h-6 w-6 text-primary" />
                 <span className="font-bold text-primary">Agua Nueva Esparta</span>
               </Link>
@@ -65,6 +68,7 @@ export default function Header() {
                   <Link
                     key={href}
                     href={href}
+                    onClick={() => setIsSheetOpen(false)}
                     className={cn(
                       'flex w-full items-center py-2 text-lg font-semibold',
                       pathname === href
