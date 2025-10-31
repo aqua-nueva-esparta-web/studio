@@ -24,8 +24,8 @@ export default function Header() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <LogoIcon className="h-6 w-6" />
-            <span className="hidden font-bold sm:inline-block">
+            <LogoIcon className="h-6 w-6 text-primary" />
+            <span className="hidden font-bold text-primary sm:inline-block">
               Agua Nueva Esparta
             </span>
           </Link>
@@ -57,8 +57,8 @@ export default function Header() {
           <SheetContent side="left">
             <div className="flex flex-col gap-4">
               <Link href="/" className="flex items-center space-x-2">
-                <LogoIcon className="h-6 w-6" />
-                <span className="font-bold">Agua Nueva Esparta</span>
+                <LogoIcon className="h-6 w-6 text-primary" />
+                <span className="font-bold text-primary">Agua Nueva Esparta</span>
               </Link>
               <nav className="grid gap-2">
                 {navLinks.map(({ href, label }) => (
@@ -84,8 +84,8 @@ export default function Header() {
             href="/"
             className="flex items-center gap-2 font-semibold md:hidden"
           >
-            <LogoIcon className="h-6 w-6" />
-            <span className="text-lg">Agua Nueva Esparta</span>
+            <LogoIcon className="h-6 w-6 text-primary" />
+            <span className="text-lg text-primary">Agua Nueva Esparta</span>
           </Link>
           <Button asChild>
             <Link href="/contact">Contacto</Link>
