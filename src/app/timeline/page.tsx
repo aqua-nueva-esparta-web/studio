@@ -41,18 +41,84 @@ export default function TimelinePage() {
                 ))}
             </div>
 
-            <div className="mt-12">
-                <h2 className="text-3xl font-bold text-center mb-8">Hitos Críticos del Proyecto</h2>
-                <div className="relative pl-6 after:absolute after:inset-y-0 after:w-px after:bg-primary after:left-0">
-                    {milestones.map((milestone, index) => (
-                        <div key={index} className="relative mb-8 pl-8">
-                            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-2 border-background"></div>
-                            <p className="font-bold text-lg text-primary">{milestone.month}</p>
-                            <p className="text-muted-foreground">{milestone.task}</p>
+<div className="mt-12">
+        <h2 className="text-3xl font-bold text-center mb-8">Hitos Críticos del Proyecto</h2>
+        {/* Pyramid 3D Container */}
+        <div className="relative max-w-4xl mx-auto py-12">
+          <div className="relative" style={{ perspective: '1200px' }}>
+            {milestones.map((milestone, index) => {
+              const width = 100 - (index * 12); // Decreasing width for pyramid effect
+              const colors = [
+                'from-blue-500 to-cyan-400',
+                'from-cyan-500 to-blue-400', 
+                'from-blue-600 to-cyan-500',
+                'from-cyan-600 to-blue-500',
+                'from-blue-700 to-cyan-600',
+                'from-cyan-700 to-blue-600',
+                'from-blue-800 to-cyan-700'
+              ];
+              return (
+                <div
+                  key={index}
+                  className="relative mx-auto mb-3 group cursor-pointer transition-all duration-300 hover:scale-105"
+                  style={{
+                    width: `${width}%`,
+                    transformStyle: 'preserve-3d',
+                    transform: 'rotateX(5deg)'
+                  }}
+                >
+                  {/* 3D Block */}
+                  <div className={`relative bg-gradient-to-r ${colors[index]} rounded-lg shadow-2xl overflow-hidden`}
+                       style={{
+                         height: '80px',
+                         transformStyle: 'preserve-3d',
+                         boxShadow: '0 20px 40px rgba(0,0,0,0.3), inset 0 -3px 0 rgba(0,0,0,0.2)'
+                       }}>
+                    {/* 3D Top Edge */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent" 
+                         style={{ height: '8px' }} />
+                    
+                    {/* Content */}
+                    <div className="relative h-full flex items-center justify-between px-6 z-10">
+                      <div className="flex items-center gap-4">
+                        <div className="bg-white/30 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center font-bold text-white text-lg shadow-lg">
+                          {milestone.month.replace('Mes ', '')}
                         </div>
-                    ))}
+                        <div>
+                          <p className="text-white font-bold text-lg drop-shadow-lg">{milestone.task}</p>
+                          <p className="text-white/90 text-sm drop-shadow-md">{milestone.month}</p>
+                        </div>
+                      </div>
+                      <div className="text-white/80 group-hover:text-white transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </div>
+                    
+                    {/* 3D Bottom Shadow */}
+                    <div className="absolute bottom-0 inset-x-0 h-2 bg-black/30 blur-sm" />
+                    
+                    {/* Shine Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:translate-x-full transition-transform duration-1000" />
+                  </div>
+                  
+                  {/* 3D Side Face */}
+                  <div className={`absolute top-0 left-0 w-full bg-gradient-to-r ${colors[index]} opacity-70`}
+                       style={{
+                         height: '80px',
+                         transform: 'translateZ(-8px)',
+                         transformStyle: 'preserve-3d',
+                         filter: 'brightness(0.6)'
+                       }} />
                 </div>
-            </div>
+              );
+            })}
+          </div>
+          
+          {/* Base Shadow */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-blue-900/20 blur-2xl rounded-full" />
         </div>
+      </div>        </div>
     );
 }
