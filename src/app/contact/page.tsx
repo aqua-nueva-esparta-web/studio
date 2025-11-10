@@ -7,11 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 export default function ContactPage() {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,51 +25,27 @@ export default function ContactPage() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    
+    // Construir el contenido del email
+    const subject = `Mensaje de contacto de ${formData.name}`;
+    const body = `
+Nombre: ${formData.name}
+Email: ${formData.email}
+Teléfono: ${formData.phone || 'No proporcionado'}
+Empresa: ${formData.company || 'No proporcionado'}
+Área de Interés: ${formData.interest || 'No proporcionado'}
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+Mensaje:
+${formData.message}
+    `;
 
-      const data = await response.json();
-
-      if (response.ok) {
-        toast({
-          title: "¡Mensaje enviado!",
-          description: "Tu mensaje ha sido enviado correctamente a Vittonic@proton.me",
-        });
-        // Limpiar el formulario
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          interest: '',
-          message: ''
-        });
-      } else {
-        toast({
-          title: "Error",
-          description: data.error || "Hubo un problema al enviar el mensaje",
-          variant: "destructive",
-        });
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "No se pudo conectar con el servidor",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Crear el link mailto con los datos del formulario
+    const mailtoLink = `mailto:Vittonic@proton.me?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Abrir el cliente de correo del usuario
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -84,13 +57,13 @@ export default function ContactPage() {
             <CardHeader>
               <CardTitle>Solicitar Información</CardTitle>
               <CardDescription>
-                Complete el formulario para obtener más detalles sobre el proyecto y las oportunidades de inversión.
+                Complete el formulario. Al enviar, se abrirá su cliente de correo con el mensaje prellenado para Vittonic@proton.me
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Nombre</Label>
+                  <Label htmlFor="name">Nombre *</Label>
                   <Input 
                     id="name" 
                     placeholder="Su nombre" 
@@ -100,7 +73,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Correo Electrónico</Label>
+                  <Label htmlFor="email">Correo Electrónico *</Label>
                   <Input 
                     id="email" 
                     type="email" 
@@ -139,21 +112,18 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message">Mensaje</Label>
+                  <Label htmlFor="message">Mensaje *</Label>
                   <Textarea 
                     id="message" 
                     placeholder="Escriba su mensaje aquí." 
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    rows={5}
                   />
                 </div>
-                <Button 
-                  type="submit" 
-                  className="w-full"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+                <Button type="submit" className="w-full">
+                  Enviar Email a Vittonic@proton.me
                 </Button>
               </form>
             </CardContent>
@@ -173,7 +143,11 @@ export default function ContactPage() {
               <Mail className="size-6 text-primary mt-1"/>
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="text-muted-foreground">contacto@aguanuevaesparta.com</p>
+                <p className="text-muted-foreground">
+                  <a href="mailto:Vittonic@proton.me" className="hover:underline">
+                    Vittonic@proton.me
+                  </a>
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
