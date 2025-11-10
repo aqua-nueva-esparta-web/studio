@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 
 // NOTA: Para usar Proton Mail necesitas instalar Proton Mail Bridge
 // y obtener las credenciales SMTP desde la aplicación Bridge
