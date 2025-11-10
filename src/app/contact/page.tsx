@@ -1,12 +1,80 @@
+'use client';
 
+import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 export default function ContactPage() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    interest: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "¡Mensaje enviado!",
+          description: "Tu mensaje ha sido enviado correctamente a Vittonic@proton.me",
+        });
+        // Limpiar el formulario
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          interest: '',
+          message: ''
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: data.error || "Hubo un problema al enviar el mensaje",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "No se pudo conectar con el servidor",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold tracking-tight text-center mb-12">Contacto</h1>
@@ -20,74 +88,115 @@ export default function ContactPage() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nombre</Label>
-                  <Input id="name" placeholder="Su nombre" />
+                  <Input 
+                    id="name" 
+                    placeholder="Su nombre" 
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
-                 <div className="space-y-2">
+                <div className="space-y-2">
                   <Label htmlFor="email">Correo Electrónico</Label>
-                  <Input id="email" type="email" placeholder="su@email.com" />
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="su@email.com" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="phone">Teléfono</Label>
-                  <Input id="phone" type="tel" placeholder="Su número de teléfono" />
+                  <Input 
+                    id="phone" 
+                    type="tel" 
+                    placeholder="Su número de teléfono" 
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
                 </div>
-                 <div className="space-y-2">
+                <div className="space-y-2">
                   <Label htmlFor="company">Empresa</Label>
-                  <Input id="company" placeholder="Nombre de su empresa" />
+                  <Input 
+                    id="company" 
+                    placeholder="Nombre de su empresa" 
+                    value={formData.company}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="interest">Área de Interés</Label>
-                  <Input id="interest" placeholder="Ej: Inversión, Tecnología, etc." />
+                  <Input 
+                    id="interest" 
+                    placeholder="Ej: Inversión, Tecnología, etc." 
+                    value={formData.interest}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message">Mensaje</Label>
-                  <Textarea id="message" placeholder="Escriba su mensaje aquí." />
+                  <Textarea 
+                    id="message" 
+                    placeholder="Escriba su mensaje aquí." 
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
-                <Button type="submit" className="w-full">Enviar Mensaje</Button>
+                <Button 
+                  type="submit" 
+                  className="w-full"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+                </Button>
               </form>
             </CardContent>
           </Card>
         </div>
         <div className="space-y-8">
-            <h2 className="text-2xl font-bold">Información de Contacto</h2>
-            <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                    <MapPin className="size-6 text-primary mt-1"/>
-                    <div>
-                        <h3 className="font-semibold">Ubicación</h3>
-                        <p className="text-muted-foreground">Isla de Nueva Esparta, Venezuela</p>
-                    </div>
-                </div>
-                <div className="flex items-start gap-4">
-                    <Mail className="size-6 text-primary mt-1"/>
-                    <div>
-                        <h3 className="font-semibold">Email</h3>
-                        <p className="text-muted-foreground">contacto@aguanuevaesparta.com</p>
-                    </div>
-                </div>
-                <div className="flex items-start gap-4">
-                    <Phone className="size-6 text-primary mt-1"/>
-                    <div>
-                        <h3 className="font-semibold">Teléfono</h3>
-                        <p className="text-muted-foreground">+58 123 456 7890</p>
-                    </div>
-                </div>
-                 <div className="flex items-start gap-4">
-                    <Clock className="size-6 text-primary mt-1"/>
-                    <div>
-                        <h3 className="font-semibold">Horario</h3>
-                        <p className="text-muted-foreground">Lunes a Viernes: 9:00 AM - 5:00 PM</p>
-                    </div>
-                </div>
+          <h2 className="text-2xl font-bold">Información de Contacto</h2>
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <MapPin className="size-6 text-primary mt-1"/>
+              <div>
+                <h3 className="font-semibold">Ubicación</h3>
+                <p className="text-muted-foreground">Isla de Nueva Esparta, Venezuela</p>
+              </div>
             </div>
-            <div className="pt-8 border-t">
-                <h3 className="text-xl font-bold mb-4">Oportunidades para Inversionistas</h3>
-                <p className="text-muted-foreground">
-                    Este proyecto representa una oportunidad única para invertir en un futuro sostenible y rentable. Contáctenos para recibir un dossier de inversión detallado.
-                </p>
+            <div className="flex items-start gap-4">
+              <Mail className="size-6 text-primary mt-1"/>
+              <div>
+                <h3 className="font-semibold">Email</h3>
+                <p className="text-muted-foreground">contacto@aguanuevaesparta.com</p>
+              </div>
             </div>
+            <div className="flex items-start gap-4">
+              <Phone className="size-6 text-primary mt-1"/>
+              <div>
+                <h3 className="font-semibold">Teléfono</h3>
+                <p className="text-muted-foreground">+58 123 456 7890</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Clock className="size-6 text-primary mt-1"/>
+              <div>
+                <h3 className="font-semibold">Horario</h3>
+                <p className="text-muted-foreground">Lunes a Viernes: 9:00 AM - 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+          <div className="pt-8 border-t">
+            <h3 className="text-xl font-bold mb-4">Oportunidades para Inversionistas</h3>
+            <p className="text-muted-foreground">
+              Este proyecto representa una oportunidad única para invertir en un futuro sostenible y rentable. Contáctenos para recibir un dossier de inversión detallado.
+            </p>
+          </div>
         </div>
       </div>
     </div>
