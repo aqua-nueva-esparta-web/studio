@@ -1,5 +1,74 @@
 # Configuración del Formulario de Contacto
 
+---
+
+## 🚨 ACTUALIZACIÓN: Implementación con Proton Mail
+
+**¡El formulario ahora está configurado para usar Proton Mail!**
+
+Se ha implementado la integración con **Nodemailer** y **Proton Mail Bridge** para enviar emails directamente a **Vittonic@proton.me**.
+
+### Pasos para activar el envío:
+
+#### 1. Instalar Nodemailer
+
+```bash
+npm install nodemailer
+npm install -D @types/nodemailer
+```
+
+#### 2. Descargar e instalar Proton Mail Bridge
+
+1. Ve a https://proton.me/mail/bridge
+2. Descarga la versión para tu sistema operativo
+3. Instala y ejecuta la aplicación
+4. Inicia sesión con tu cuenta de Proton Mail
+
+#### 3. Obtener credenciales SMTP desde Bridge
+
+1. Abre Proton Mail Bridge
+2. Haz clic en tu cuenta
+3. Selecciona **"SMTP Settings"** o **"Configuración SMTP"**
+4. Verás:
+   - **Server**: 127.0.0.1
+   - **Port**: 1025
+   - **Username**: tu_email@proton.me
+   - **Password**: [una contraseña generada automáticamente]
+
+⚠️ **IMPORTANTE**: Usa la contraseña generada por Bridge, NO tu contraseña de Proton Mail.
+
+#### 4. Configurar variables de entorno
+
+Crea un archivo `.env.local` en la raíz del proyecto:
+
+```env
+PROTON_SMTP_USER=tu_email@proton.me
+PROTON_SMTP_PASS=password_generada_por_bridge
+```
+
+#### 5. Reiniciar el servidor de desarrollo
+
+```bash
+npm run dev
+```
+
+### ✅ ¡Listo!
+
+Ahora el formulario enviará automáticamente los mensajes a **Vittonic@proton.me** con formato HTML profesional.
+
+### Características implementadas:
+
+- ✅ Envío SMTP a través de Proton Mail Bridge
+- ✅ Emails HTML con diseño profesional
+- ✅ Validación de variables de entorno
+- ✅ Mensajes de error informativos
+- ✅ Logs detallados del envío
+- ✅ Destinatario fijo: **Vittonic@proton.me**
+
+---
+
+
+
 ## Estado Actual
 
 El formulario de contacto está **configurado y funcional** para enviar datos a **Vittonic@proton.me**.
